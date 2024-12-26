@@ -103,6 +103,9 @@ DATABASES = {
         'PASSWORD': 'NQ3MuPowEWH1',#tmpPostgres.password,
         'HOST': 'ep-young-butterfly-a5189f5s.us-east-2.aws.neon.tech',#'tmpPostgres.hostname,
         'PORT': 5432,
+        'OPTIONS': {
+             'sslmode': 'require',
+        }
     }
 }
 

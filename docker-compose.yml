@@ -15,11 +15,11 @@ services:
       - '5432:5432'
   web:
     build: .
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: python3 manage.py runserver 0.0.0.0:10000
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "10000:10000"
     depends_on:
       db:
         condition: service_healthy

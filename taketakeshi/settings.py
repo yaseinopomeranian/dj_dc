@@ -108,9 +108,9 @@ DATABASES = {
         'HOST': 'dpg-ctmlsobv2p9s73fco8c0-a' ,
 
         'PORT': 5432,
-        'OPTIONS': {
-             'sslmode': 'require',
-        }
+#        'OPTIONS': {
+#             'sslmode': 'require',
+#        }
     }
 }
 

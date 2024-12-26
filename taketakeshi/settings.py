@@ -75,15 +75,33 @@ WSGI_APPLICATION = 'taketakeshi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+#DATABASES = {
+#    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'postgres',
+#        'USER': 'postgres',
+#        'PASSWORD': 'postgres',
+#        'HOST': 'db',
+#        'PORT': 5432,
+#    }
+#}
+
+# Add these at the top of your settings.py
+#from os import getenv
+#from dotenv import load_dotenv
+
+# Replace the DATABASES section of your settings.py with this
+#tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
+
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'db',
+        'NAME': 'db_dj_dc',#tmpPostgres.path.replace('/', ''),
+        'USER': 'db_dj_dc_owner',#tmpPostgres.username,
+        'PASSWORD': 'NQ3MuPowEWH1',#tmpPostgres.password,
+        'HOST': 'ep-young-butterfly-a5189f5s.us-east-2.aws.neon.tech',#'tmpPostgres.hostname,
         'PORT': 5432,
     }
 }

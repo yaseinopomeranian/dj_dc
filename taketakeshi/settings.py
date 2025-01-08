@@ -100,12 +100,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'db_dj_dc',#tmpPostgres.path.replace('/', ''),
 
-#        'USER': 'db_dj_dc_owner',#tmpPostgres.username,
-#        'PASSWORD': 'NQ3MuPowEWH1',#tmpPostgres.password,
-#        'HOST': 'ep-young-butterfly-a5189f5s.us-east-2.aws.neon.tech',#'tmpPostgres.hostname,
-        'USER': 'db_dj_dc_user',
-        'PASSWORD': 'VuSR7Vu4y5hHaI3g1uJ7aa4PEF2kuha6',
-        'HOST': 'dpg-ctmlsobv2p9s73fco8c0-a' ,
+        'USER': 'db_dj_dc_owner',#tmpPostgres.username,
+        'PASSWORD': 'NQ3MuPowEWH1',#tmpPostgres.password,
+        'HOST': 'ep-young-butterfly-a5189f5s.us-east-2.aws.neon.tech',#'tmpPostgres.hostname,
+#        'USER': 'db_dj_dc_user',
+#        'PASSWORD': 'VuSR7Vu4y5hHaI3g1uJ7aa4PEF2kuha6',
+#        'HOST': 'dpg-ctmlsobv2p9s73fco8c0-a' ,
 
         'PORT': 5432,
 #        'OPTIONS': {

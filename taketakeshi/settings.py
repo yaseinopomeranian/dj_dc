@@ -107,15 +107,18 @@ DATABASES = {
 #        'USER': 'db_dj_dc_user',
 #        'PASSWORD': 'VuSR7Vu4y5hHaI3g1uJ7aa4PEF2kuha6',
 #        'HOST': 'dpg-ctmlsobv2p9s73fco8c0-a' ,
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT', '5432'),
+
+#        'NAME': os.getenv('DB_NAME'),
+#        'USER': os.getenv('DB_USER'),
+#        'PASSWORD': os.getenv('DB_PASSWORD'),
+#        'HOST': os.getenv('DB_HOST'),
+#        'PORT': os.getenv('DB_PORT', '5432'),
+
+         'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 #        'PORT': 5432,
-        'OPTIONS': {
-             'sslmode': 'require',
-        }
+#        'OPTIONS': {
+#             'sslmode': 'require',
+#        }
     }
 }
 

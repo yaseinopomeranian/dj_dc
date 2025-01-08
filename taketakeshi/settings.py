@@ -91,6 +91,7 @@ WSGI_APPLICATION = 'taketakeshi.wsgi.application'
 # Add these at the top of your settings.py
 #from os import getenv
 #from dotenv import load_dotenv
+import os
 
 # Replace the DATABASES section of your settings.py with this
 #tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
@@ -98,16 +99,20 @@ WSGI_APPLICATION = 'taketakeshi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_dj_dc',#tmpPostgres.path.replace('/', ''),
+#        'NAME': 'db_dj_dc',#tmpPostgres.path.replace('/', ''),
 
-        'USER': 'db_dj_dc_owner',#tmpPostgres.username,
-        'PASSWORD': 'NQ3MuPowEWH1',#tmpPostgres.password,
-        'HOST': 'ep-young-butterfly-a5189f5s.us-east-2.aws.neon.tech',#'tmpPostgres.hostname,
+#        'USER': 'db_dj_dc_owner',#tmpPostgres.username,
+#        'PASSWORD': 'NQ3MuPowEWH1',#tmpPostgres.password,
+#        'HOST': 'ep-young-butterfly-a5189f5s.us-east-2.aws.neon.tech',#'tmpPostgres.hostname,
 #        'USER': 'db_dj_dc_user',
 #        'PASSWORD': 'VuSR7Vu4y5hHaI3g1uJ7aa4PEF2kuha6',
 #        'HOST': 'dpg-ctmlsobv2p9s73fco8c0-a' ,
-
-        'PORT': 5432,
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '5432'),
+#        'PORT': 5432,
         'OPTIONS': {
              'sslmode': 'require',
         }

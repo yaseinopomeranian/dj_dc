@@ -91,7 +91,9 @@ WSGI_APPLICATION = 'taketakeshi.wsgi.application'
 # Add these at the top of your settings.py
 #from os import getenv
 #from dotenv import load_dotenv
+
 import os
+import dj_database_url
 
 # Replace the DATABASES section of your settings.py with this
 #tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
@@ -104,6 +106,8 @@ DATABASES = {
 #        'USER': 'db_dj_dc_owner',#tmpPostgres.username,
 #        'PASSWORD': 'NQ3MuPowEWH1',#tmpPostgres.password,
 #        'HOST': 'ep-young-butterfly-a5189f5s.us-east-2.aws.neon.tech',#'tmpPostgres.hostname,
+
+#        'NAME': 'db_dj_dc',#tmpPostgres.path.replace('/', ''),
 #        'USER': 'db_dj_dc_user',
 #        'PASSWORD': 'VuSR7Vu4y5hHaI3g1uJ7aa4PEF2kuha6',
 #        'HOST': 'dpg-ctmlsobv2p9s73fco8c0-a' ,

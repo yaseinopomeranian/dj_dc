@@ -118,7 +118,8 @@ DATABASES = {
 #        'HOST': os.getenv('DB_HOST'),
 #        'PORT': os.getenv('DB_PORT', '5432'),
 
-         'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+         #'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+         'default': dj_database_url.config(default='postgresql://db_dj_dc_user:VuSR7Vu4y5hHaI3g1uJ7aa4PEF2kuha6@dpg-ctmlsobv2p9s73fco8c0-a:5432/db_dj_dc')
 #        'PORT': 5432,
 #        'OPTIONS': {
 #             'sslmode': 'require',
